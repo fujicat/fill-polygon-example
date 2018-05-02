@@ -14,9 +14,15 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+
+    override func viewDidAppear() {
+        super.viewDidAppear()
+
         let v = view as? BezierLinesView
         v?.setup()
         v?.fill()
+        v?.beginDraw()
     }
 
     override var representedObject: Any? {
